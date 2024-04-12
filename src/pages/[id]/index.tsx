@@ -1,9 +1,11 @@
 import { PageLayout } from "@/componnets";
 
-export default function Home() {
+function Detail() {
   return (
     <PageLayout>
-      <h1>Brew finder</h1>
+      <h1>Detail</h1>
     </PageLayout>
   );
 }
+
+export default Detail;
