@@ -21,6 +21,7 @@ function PageLayout({ title = "Brew finder", children }: Props) {
       <Head>
         <title>{title}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Encuentra cervecerías en tu zona." />
         <link rel="icon" href="/favicon.svg" />
       </Head>
 
