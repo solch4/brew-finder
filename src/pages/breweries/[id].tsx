@@ -72,23 +72,27 @@ function Detail({ name, street, phone }: Brewery) {
       <Heading fontSize="2xl" fontWeight="semibold">
         Opiniones
       </Heading>
-      {reviews.map((review) => (
-        <ReviewCard {...review} key={review.id} />
-      ))}
+      <Stack spacing={4}>
+        {reviews.map((review) => (
+          <ReviewCard {...review} key={review.id} />
+        ))}
+      </Stack>
 
       {/* buttons (reserva + transporte) */}
-      {/* @ts-ignore - todo: arreglar tipado de Button */}
-      <Button variant="gradient" fromcolor="primary" tocolor="secondary">
-        Reservar mesa
-      </Button>
-      <Button
-        variant="outline-gradient"
-        // @ts-ignore
-        fromcolor="primary"
-        tocolor="secondary"
-      >
-        Opciones de transporte
-      </Button>
+      <Stack spacing={6}>
+        {/* @ts-ignore - todo: arreglar tipado de Button */}
+        <Button variant="gradient" fromcolor="primary" tocolor="secondary">
+          Reservar mesa
+        </Button>
+        <Button
+          variant="outline-gradient"
+          // @ts-ignore
+          fromcolor="primary"
+          tocolor="secondary"
+        >
+          Opciones de transporte
+        </Button>
+      </Stack>
     </PageLayout>
   );
 }

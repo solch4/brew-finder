@@ -1,5 +1,5 @@
 import type { GetStaticProps } from "next";
-import { Heading } from "@chakra-ui/react";
+import { Stack, Heading } from "@chakra-ui/react";
 import { BreweryCards, HappyHourAlert, PageLayout } from "@/components";
 import { getBreweries } from "@/lib/breweryApi";
 import { Brewery } from "@/types";
@@ -14,15 +14,19 @@ export default function Home({ allBreweries, californiaBreweries }: Props) {
     <PageLayout>
       <HappyHourAlert />
 
-      <Heading as="h1" fontSize="4xl">
-        Todas las opciones
-      </Heading>
-      <BreweryCards breweries={allBreweries} />
+      <Stack gap={6}>
+        <Heading as="h1" fontSize="4xl" lineHeight="110%">
+          Todas las opciones
+        </Heading>
+        <BreweryCards breweries={allBreweries} />
+      </Stack>
 
-      <Heading fontSize="4xl" fontWeight="semibold">
-        Opciones en California
-      </Heading>
-      <BreweryCards breweries={californiaBreweries} />
+      <Stack gap={6}>
+        <Heading fontSize="4xl" lineHeight="110%" fontWeight="semibold">
+          Opciones en California
+        </Heading>
+        <BreweryCards breweries={californiaBreweries} />
+      </Stack>
     </PageLayout>
   );
 }
