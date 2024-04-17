@@ -1,16 +1,18 @@
 import Head from "next/head";
 import { Roboto } from "next/font/google";
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, Stack } from "@chakra-ui/react";
 import { Header, BottomTabs } from "@/componnets";
+import theme from "@/styles/theme";
 
 const roboto = Roboto({
   subsets: ["latin"],
   weight: ["400", "700"],
+  variable: "--font-roboto",
 });
 
 interface Props {
   title?: string;
-  children: JSX.Element;
+  children: React.ReactNode;
 }
 
 function PageLayout({ title = "Brew finder", children }: Props) {
@@ -22,13 +24,21 @@ function PageLayout({ title = "Brew finder", children }: Props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <ChakraProvider>
-        <div className={roboto.className}>
-          <Header />
-          <main>{children}</main>
-          <BottomTabs /> 
-        </div>
+      <ChakraProvider theme={theme}>
+        <Header />
+        <Stack spacing={6} padding={"1rem"} flex={1}>
+          {children}
+        </Stack>
+        <BottomTabs />
       </ChakraProvider>
+
+      <style jsx global>
+        {`
+          :root {
+            --font-roboto: ${roboto.style.fontFamily};
+          }
+        `}
+      </style>
     </>
   );
 }
