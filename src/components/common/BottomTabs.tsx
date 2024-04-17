@@ -12,11 +12,17 @@ interface TabButtonProps {
 
 function TabButton({ Icon, label, href }: TabButtonProps) {
   return (
-    <Link as={NextLink} href={href} flex={1} textAlign={"center"}>
-      <ChakraIcon as={Icon} fontSize={24} />
-      <Text fontSize={"xs"} lineHeight={"110%"}>
-        {label}
-      </Text>
+    <Link
+      as={NextLink}
+      href={href}
+      flex={1}
+      display="flex"
+      flexDirection="column"
+      alignItems="center"
+      fontSize="xs"
+    >
+      <ChakraIcon as={Icon} fontSize={24} aria-hidden />
+      {label}
     </Link>
   );
 }
