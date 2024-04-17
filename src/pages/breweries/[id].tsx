@@ -37,11 +37,11 @@ function Detail({ name, street, phone }: Brewery) {
       {/* ubicación + teléfono */}
       <Stack>
         <Flex gap={2} alignItems={"center"}>
-          <BiMap fontSize="1.5rem" />
+          <BiMap title="Ubicación" fontSize="1.5rem" />
           <Text fontSize="sm">{street}</Text>
         </Flex>
         <Flex gap={2} alignItems={"center"}>
-          <MdLocalPhone fontSize="1.5rem" />
+          <MdLocalPhone title="Número de teléfono" fontSize="1.5rem" />
           <Text fontSize="sm">{phone}</Text>
         </Flex>
       </Stack>

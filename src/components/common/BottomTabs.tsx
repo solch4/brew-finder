@@ -2,7 +2,7 @@ import NextLink from "next/link";
 import { BsChat } from "react-icons/bs";
 import { RxCalendar } from "react-icons/rx";
 import { MdHomeFilled } from "react-icons/md";
-import { As, Flex, Icon as ChakraIcon, Link, Text } from "@chakra-ui/react";
+import { As, Flex, Icon as ChakraIcon, Link } from "@chakra-ui/react";
 
 interface TabButtonProps {
   Icon: As;
