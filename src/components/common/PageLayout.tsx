@@ -27,7 +27,7 @@ function PageLayout({ title = "Brew finder", children }: Props) {
 
       <ChakraProvider theme={theme}>
         <Header />
-        <Stack spacing={6} padding={"1rem"} flex={1}>
+        <Stack as="main" spacing={6} padding={"1rem"} flex={1}>
           {children}
         </Stack>
         <BottomTabs />
