@@ -1,4 +1,4 @@
-import { PageLayout } from "@/componnets";
+import { PageLayout } from "@/components";
 
 function Detail() {
   return (

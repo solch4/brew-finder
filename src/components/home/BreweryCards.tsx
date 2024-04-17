@@ -1,5 +1,5 @@
 import { Box, Flex } from "@chakra-ui/react";
-import { BreweryCard } from "@/componnets";
+import { BreweryCard } from "@/components";
 import { Brewery } from "@/types";
 
 interface Props {

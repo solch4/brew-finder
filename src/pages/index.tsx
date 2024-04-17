@@ -1,6 +1,6 @@
 import type { GetStaticProps } from "next";
 import { Heading } from "@chakra-ui/react";
-import { BreweryCards, HappyHourAlert, PageLayout } from "@/componnets";
+import { BreweryCards, HappyHourAlert, PageLayout } from "@/components";
 import { getBreweries } from "@/lib/breweryApi";
 import { Brewery } from "@/types";
 

@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { Roboto } from "next/font/google";
 import { ChakraProvider, Stack } from "@chakra-ui/react";
-import { Header, BottomTabs } from "@/componnets";
+import { Header, BottomTabs } from "@/components";
 import theme from "@/styles/theme";
 
 const roboto = Roboto({
