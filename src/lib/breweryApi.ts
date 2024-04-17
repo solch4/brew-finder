@@ -17,3 +17,9 @@ export const getBreweries = async (endpoint: string = "/") => {
   const breweries: APIBrewery[] = res.data;
   return breweries.map(formatBrewery);
 };
+
+export const getBreweryById = async (id: string) => {
+  const res = await axios.get(`/${id}`);
+  const brewery: APIBrewery = res.data;
+  return formatBrewery(brewery);
+};
