@@ -16,8 +16,10 @@ function HappyHourAlert() {
         // width + ml usados para ignorar padding de elemento padre
         width={"calc(100% + 2rem)"}
         ml={"-1rem"}
+        borderColor={"orange.500"}
+        paddingInlineStart={4}
       >
-        <AlertIcon />
+        <AlertIcon color={"orange.500"} />
 
         <Box color={"gray.700"}>
           <AlertTitle>Happy Hour</AlertTitle>
