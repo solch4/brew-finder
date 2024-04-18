@@ -56,9 +56,6 @@ function BreweryCard({ id, name, street, phone }: Brewery) {
         width={{ base: "85%" }}
         marginInline="auto"
         variant="gradient"
-        // @ts-ignore - todo: arreglar tipado de Button
-        fromcolor="primary"
-        tocolor="secondary"
       >
         Ver más
       </Button>

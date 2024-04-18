@@ -24,7 +24,9 @@ export const Button = defineStyleConfig({
 
   variants: {
     gradient: (props) => {
-      const { theme, fromcolor, tocolor } = props;
+      // por default tiene un gradient del color primario al secundario.
+      // si se desea cambiar esos colores es posible pasarlos por props
+      const { theme, fromcolor = "primary", tocolor = "secondary" } = props;
       const lgFrom = getColor(theme, fromcolor);
       const lgTo = getColor(theme, tocolor);
       return {
@@ -35,12 +37,14 @@ export const Button = defineStyleConfig({
         },
       };
     },
+
     "outline-gradient": (props) => {
-      const { theme, fromcolor, tocolor } = props;
+      // por default tiene un gradient del color primario al secundario.
+      // si se desea cambiar esos colores es posible pasarlos por props
+      const { theme, fromcolor = "primary", tocolor = "secondary" } = props;
       const lgFrom = getColor(theme, fromcolor);
       const lgTo = getColor(theme, tocolor);
       const bgColor = getColor(theme, mode("white", "dark.800")(props));
-
       return {
         border: "1px solid transparent",
         background: `linear-gradient(${bgColor}, ${bgColor}) padding-box, 
@@ -52,10 +56,5 @@ export const Button = defineStyleConfig({
         },
       };
     },
-  },
-
-  defaultProps: {
-    size: "md",
-    variant: "gradient",
   },
 });

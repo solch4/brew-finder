@@ -80,18 +80,8 @@ function Detail({ name, street, phone }: Brewery) {
 
       {/* buttons (reserva + transporte) */}
       <Stack spacing={6}>
-        {/* @ts-ignore - todo: arreglar tipado de Button */}
-        <Button variant="gradient" fromcolor="primary" tocolor="secondary">
-          Reservar mesa
-        </Button>
-        <Button
-          variant="outline-gradient"
-          // @ts-ignore
-          fromcolor="primary"
-          tocolor="secondary"
-        >
-          Opciones de transporte
-        </Button>
+        <Button variant="gradient">Reservar mesa</Button>
+        <Button variant="outline-gradient">Opciones de transporte</Button>
       </Stack>
     </PageLayout>
   );
