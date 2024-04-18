@@ -12,7 +12,14 @@ function Header() {
   const shouldRenderBackBtn = router.pathname !== "/";
 
   return (
-    <Flex as={"header"} position={"sticky"} top={0} bg={"dark.900"} p={2}>
+    <Flex
+      as="header"
+      position="sticky"
+      zIndex={999}
+      top={0}
+      bg="dark.900"
+      p={2}
+    >
       {shouldRenderBackBtn ? (
         <HeaderButton
           aria-label="Volver"
