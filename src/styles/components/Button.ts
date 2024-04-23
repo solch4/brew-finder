@@ -48,10 +48,10 @@ export const Button = defineStyleConfig({
       return {
         border: "1px solid transparent",
         background: `linear-gradient(${bgColor}, ${bgColor}) padding-box, 
-        linear-gradient(90deg, ${lgFrom}, ${lgTo}) border-box`,
+                     linear-gradient(90deg, ${lgFrom}, ${lgTo}) border-box`,
         _hover: {
-          background: `linear-gradient(${bgColor}, ${bgColor}) padding-box, 
-          linear-gradient(120deg, ${lgFrom}, ${lgTo}) border-box`,
+          background: `linear-gradient(${bgColor}dd, ${bgColor}dd) padding-box, 
+                       linear-gradient(120deg, ${lgFrom}, ${lgTo}) border-box`,
           filter: "brightness(1.2)",
         },
       };
